@@ -95,7 +95,7 @@ public class EnvTest extends TestCase {
             db.put(tx, bytes("New York"), bytes("silver"));
             fail("Expected LMDBException");
         } catch (LMDBException e) {
-            assertEquals( LMDBException.Status.EACCES.ordinal(), e.getErrorCode());
+            assertEquals( LMDBException.Status.EACCES.getStatusCode(), e.getErrorCode());
         }
 
         db.close();

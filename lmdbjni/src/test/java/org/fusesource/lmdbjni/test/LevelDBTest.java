@@ -211,6 +211,7 @@ public class LevelDBTest extends TestCase {
         LMDBFactory.pushMemoryPool(1024 * 512);
         try {
             LMDBOptions options = new LMDBOptions();
+            //options.mapSize(1024L * 1024L * 1024L);
             options.createIfMissing(true);
             options.openFlags(NOSYNC); // this test would run too slow without this.
 

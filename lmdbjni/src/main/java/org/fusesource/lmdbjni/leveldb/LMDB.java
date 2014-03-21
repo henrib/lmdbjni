@@ -43,7 +43,7 @@ public class LMDB implements DB {
     public LMDB(File path, Options options) throws IOException {
         try {
             env = new Env();
-            env.setMapSize(1024L * 1024 * 1024 * 1024);
+            env.setMapSize(1024L * 1024 * 1024);// * 1024);
             if (options instanceof LMDBOptions) {
                 LMDBOptions o = ((LMDBOptions) options);
                 if( o.maxReaders() >= 0 ) {

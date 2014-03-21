@@ -27,10 +27,12 @@
     /* Windows based build */
     #define _WIN32_WINNT 0x0501
     #include <windows.h>
+    #include <errno.h>
 #endif
 #if !defined(HAVE_CONFIG_H) && (defined(_WIN32) || defined(_WIN64))
     #define HAVE_STDLIB_H 1
     #define HAVE_STRINGS_H 1
+    #define HAVE_UNISTD_H 1
 #endif
 
 #ifdef HAVE_UNISTD_H
